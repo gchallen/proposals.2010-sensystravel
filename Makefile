@@ -1,4 +1,4 @@
-TARGETS = summary description budgetjustification
+TARGETS = summary description budgetjustification biosketch
 
 TEXFILES = $(wildcard *.tex)
 PDFS = $(addsuffix .pdf,$(TARGETS))
