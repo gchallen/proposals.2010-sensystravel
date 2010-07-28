@@ -3,7 +3,10 @@ TARGETS = summary description budgetjustification biosketch
 TEXFILES = $(wildcard *.tex)
 PDFS = $(addsuffix .pdf,$(TARGETS))
 
-all: $(PDFS)
+all: $(PDFS) join
+
+join: $(PDFS)
+	pdfjoin --paper letterpaper --outfile proposal.pdf $(PDFS)
 
 %.pdf: %.tex $(TEXFILES)
 	pdflatex $*.tex
