@@ -14,7 +14,7 @@ join: $(PDFS)
 	pdflatex $*.tex
 
 clean:
-	@/bin/rm -f $(PDF) *.out *.dvi *.aux *.ps *~ *.log *.lot *.lof *.toc *.blg *.bbl url.sty
+	@/bin/rm -f $(PDFS) *.out *.dvi *.aux *.ps *~ *.log *.lot *.lof *.toc *.blg *.bbl url.sty
 
 FORCE:
 
