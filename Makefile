@@ -6,9 +6,15 @@ PDFS = $(addsuffix .pdf,$(TARGETS))
 all: $(PDFS) join
 
 join: $(PDFS)
-	pdfjoin --paper letterpaper --outfile proposal.pdf $(PDFS)
+	pdfjoin --paper letterpaper --outfile proposal.pdf $(PDFS) references.pdf
 
-%.pdf: %.tex $(TEXFILES)
+summary.pdf: summary.tex summary.bib
+	pdflatex summary.tex
+	bibtex summary
+	pdflatex summary.tex
+	pdflatex summary.tex
+
+%.pdf: %.tex 
 	pdflatex $*.tex
 	pdflatex $*.tex
 	pdflatex $*.tex
