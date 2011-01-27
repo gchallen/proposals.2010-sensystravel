@@ -1,0 +1,11 @@
+*.aux
+*.out
+*.log
+*.bbl
+*.blg
+biosketch.pdf
+budgetjustification.pdf
+description.pdf
+proposal.pdf
+references.pdf
+summary.pdf
