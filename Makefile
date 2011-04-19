@@ -25,7 +25,7 @@ summary.pdf: summary.tex summary.bib
 	pdflatex $*.tex
 
 clean:
-	@/bin/rm -f $(PDFS) *.out *.dvi *.aux *.ps *~ *.log *.lot *.lof *.toc *.blg *.bbl url.sty
+	@/bin/rm -f $(PDFS) proposal.pdf *.out *.dvi *.aux *.ps *~ *.log *.lot *.lof *.toc *.blg *.bbl url.sty
 
 FORCE:
 .PHONY: join
